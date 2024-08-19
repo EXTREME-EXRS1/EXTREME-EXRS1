@@ -1,0 +1,111 @@
+//±¾³ÌĞòÓÉLang±àĞ´
+//°æÈ¨ËùÓĞ£¬½ûÖ¹×ªÔØ
+//*ÒòÎÄ×Ö±àÂë´íÎó£¬µ¼ÖÂÖĞÎÄÂÒÂë
+
+#include <bits/stdc++.h>
+#include <Windows.h>
+
+using namespace std;
+
+char Ops;			//²Ù×÷
+double Num;			//µÃÊı
+
+
+void error (int ops) {			//void ´íÎó±¨¸æ
+	cout << endl;
+	
+	switch (ops) {
+		case 0:
+			cout << "ï¿½ï¿½ï¿½ó£º³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª0ï¿½ï¿½";
+			break;
+
+		case 1: 
+			cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?";
+			break;
+
+		case 2:
+			cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ§ï¿½ï¿½ï¿½ë£¡";
+
+		default:
+			cout << "ï¿½ï¿½ï¿½ï¿½Î´Öªï¿½ï¿½ï¿½ï¿½";
+	}
+
+	system("cls");
+	Ops = 'a'; 
+}
+
+void calculate (double n1, char op, double n2) {		//void ï¿½ï¿½ï¿½ï¿½ 
+	switch (op) {
+		case '+':
+			Num = n1 + n2;
+			break;
+
+		case '-':
+			Num = n1 - n2;
+			break;
+
+		case '*':
+			Num = n1 * n2;
+			break;
+
+		case '/':
+			if (n2 != 0) Num = n1 / n2; 
+			else error (0);
+			break;
+		
+		default:
+            error (1); 
+	}
+}
+
+void operate () {			//void ï¿½ï¿½ï¿½ï¿½ 
+	switch (Ops) {
+		case 'e':
+			exit (0); 
+
+		case 'c':
+			system("cls");
+			Ops = 'a'; 
+			break;
+
+		case 'r':
+			Ops = 'a';
+			break;
+
+		default:
+			error (2);
+	}
+
+}
+
+void cinoperate () {		//void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿? 
+		cout << endl << endl << "ï¿½ï¿½Ç°ï¿½ï¿½Ö´ï¿½ĞµÄ²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ğ¡Ğ´ï¿½ï¿½:" << endl;
+		cout << "[e]ï¿½Ë³ï¿½   [r]ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½" << endl; 
+		cout << "[c]ï¿½ï¿½ï¿?   / ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½" << endl; 
+		cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿?";
+
+		cin >> Ops;
+		operate ();
+}
+
+int main () {			//int ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+	char op;
+	double num1, num2;
+	
+	cout << "ï¿½ï¿½Ó­Ê¹ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" << endl;
+	Sleep (4000);			//Í£ï¿½ï¿½ï¿½ï¿½ 
+	cout << "ï¿½ï¿½ï¿½ï¿½Ö§ï¿½ï¿½+ï¿½ï¿½-ï¿½ï¿½*ï¿½ï¿½/" << endl;
+	Sleep (2000);
+	do {
+		cout << endl; 
+		Ops = 'n';			//ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½
+
+		cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ç»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½Ã¿Õ¸ï¿½ï¿½ï¿½ï¿?" << endl;
+		cin >> num1 >> op >> num2;
+
+		calculate (num1,op,num2);
+		cout << num1 << op << num2 << "=" << Num; 
+
+		cinoperate ();
+	} while (Ops == 'a');
+}
