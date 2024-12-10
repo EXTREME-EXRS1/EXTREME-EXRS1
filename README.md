@@ -9,10 +9,3 @@
 
 ![欢迎](https://api.xecades.xyz/api?img=2&color=40%2C10%2C121%2C1&date=2025-01-04&str=12岁生日&quote=祝你单抽出金不歪&bilibili=EXRS1&email=EXTREME-EXRS1%40outlook.com&github=EXTREME-EXRS1%40outlook.com&luogu=EXRS1&V=EXRS1&wechat=EXRS1)
 #### 你是第 [![访问次数](https://badges.toozhao.com/badges/01JB5R5T5R0PT5DREFKS7S6ZQG/blue.svg)](https://badges.toozhao.com/stats/01JB5R5T5R0PT5DREFKS7S6ZQG "Get your own page views count badge on badges.toozhao.com") 个光顾的访客
-***
-# EXRS1的洛谷尘歌壶
-![信息](https://api.jerryz.com.cn/about?id=1444416&card_width=750&hide_title=true)
-![咕值](http://api.jerryz.com.cn/guzhi?id=1444416&scores=100,14,0,0,0&card_width=750&hide_title=true)
-![练习](https://api.jerryz.com.cn/practice?id=1444416&disable_cache=true&card_width=750&hide_title=true)
-![图片](https://t.mwm.moe/fj/)
-##### [攒粉球](https://ys.mihoyo.com/cloud/#/) 
